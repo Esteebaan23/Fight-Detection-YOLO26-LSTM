@@ -18,10 +18,6 @@ This pipeline performs:
    - Violence confidence sum
    - Violence relative area
    - Violence max confidence
-   - Weapon count
-   - Weapon confidence sum
-   - Weapon relative area
-   - Weapon max confidence
 3. Temporal classification using a BiLSTM with attention
 4. Video annotation with:
    - Bounding boxes
@@ -32,28 +28,6 @@ A modular computer vision system for detecting violent events in video using:
 - **YOLO** for object detection (e.g., violence, weapon)
 - **Temporal LSTM with Attention** for sequence-level fight classification
 - Real-time visualization + annotated video export
-
----
-
-## 🔎 Overview
-
-This pipeline performs:
-
-1. Frame-level object detection using YOLO
-2. Extraction of an 8D feature vector per frame:
-   - Violence count
-   - Violence confidence sum
-   - Violence relative area
-   - Violence max confidence
-   - Weapon count
-   - Weapon confidence sum
-   - Weapon relative area
-   - Weapon max confidence
-3. Temporal classification using a BiLSTM with attention
-4. Video annotation with:
-   - Bounding boxes
-   - Global label: **Fight / No Fight**
-   - Optional real-time display
 
 ---
 ## 📁 Project Structure
@@ -82,7 +56,67 @@ fight-detector-yolo-lstm/
 ├── requirements.txt
 └── README.md
 ```
+⚙️ Installation
+
+Create a virtual environment (recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\\Scripts\\activate       # Windows
+```
+
+--- 
+Install dependencies:
+```bash
+Install dependencies:
+```
+
+🚀 Run the Pipeline
+
+Basic usage:
+```bash
+python -m scripts.annotate_video \
+    --input videos/V_997.mp4 \
+    --output outputs/output.mp4 \
+    --conf 0.5 \
+    --window 32
+```
+
+Argument	Description
+--conf	YOLO confidence threshold
+--window	Temporal window size for LSTM
+--fps-target	Downsample FPS for processing
+--max-frames	Limit number of processed frames
+--display	opencv or colab
+--display-fps	Max FPS for realtime display
+🧠 Model Architecture
+YOLO
+- Detects frame-level Violence
+
+
+LSTM Classifier
+- 3-layer BiLSTM
+- Attention mechanism
+- LayerNorm + GELU head
+- Binary classification (Fight / No Fight)
+
+
+📊 Output
+--- 
+The system produces:
+
+- Annotated MP4 video
+- Bounding boxes per detection
 
 
 
+⚠ Notes
+---
+- GPU recommended for real-time performance.
+- Weights must match the architecture defined in lstm_classifier.py.
 
+
+👤 Author
+---
+Harold Lucero N.
