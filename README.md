@@ -6,7 +6,9 @@ A modular computer vision system for detecting violent events in video using:
 - **Temporal LSTM with Attention** for sequence-level fight classification
 - Real-time visualization + annotated video export
 
-![Pipeline Overview](Images/Demo.png)
+<p align="center">
+  <img src="Images/Demo.png" alt="Pipeline Overview" width="700"/>
+</p>
 ---
 
 ## 🔎 Overview
