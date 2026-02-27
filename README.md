@@ -1,4 +1,4 @@
-Fight Detection Pipeline (YOLO26 + LSTM)
+## Fight Detection Pipeline (YOLO26 + LSTM)
 
 A modular computer vision system for detecting violent events in video using:
 
@@ -56,6 +56,7 @@ fight-detector-yolo-lstm/
 ├── requirements.txt
 └── README.md
 ```
+---
 ⚙️ Installation
 
 Create a virtual environment (recommended):
@@ -66,7 +67,7 @@ source venv/bin/activate      # macOS/Linux
 venv\\Scripts\\activate       # Windows
 ```
 
---- 
+--
 Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -92,29 +93,28 @@ python -m scripts.annotate_video \
 | `--display`     | `opencv` or `colab`              |
 | `--display-fps` | Max FPS for realtime display     |
 
-
+--
 LSTM Classifier
 - 3-layer BiLSTM
 - Attention mechanism
 - LayerNorm + GELU head
 - Binary classification (Fight / No Fight)
 
-
+---
 📊 Output
---- 
+ 
 The system produces:
 
 - Annotated MP4 video
 - Bounding boxes per detection
 
-
-
+---
 ⚠ Notes
 ---
 - GPU recommended for real-time performance.
 - Weights must match the architecture defined in lstm_classifier.py.
 
-
-👤 Author
 ---
+👤 Author
+
 Harold Lucero N.
