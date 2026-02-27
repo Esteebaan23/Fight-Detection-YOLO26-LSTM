@@ -83,16 +83,14 @@ python -m scripts.annotate_video \
     --window 32
 ```
 
-Argument	Description
---conf	YOLO confidence threshold
---window	Temporal window size for LSTM
---fps-target	Downsample FPS for processing
---max-frames	Limit number of processed frames
---display	opencv or colab
---display-fps	Max FPS for realtime display
-🧠 Model Architecture
-YOLO
-- Detects frame-level Violence
+| Argument        | Description                      |
+| --------------- | -------------------------------- |
+| `--conf`        | YOLO confidence threshold        |
+| `--window`      | Temporal window size for LSTM    |
+| `--fps-target`  | Downsample FPS for processing    |
+| `--max-frames`  | Limit number of processed frames |
+| `--display`     | `opencv` or `colab`              |
+| `--display-fps` | Max FPS for realtime display     |
 
 
 LSTM Classifier
