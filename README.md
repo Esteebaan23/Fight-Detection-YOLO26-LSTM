@@ -69,7 +69,7 @@ venv\\Scripts\\activate       # Windows
 --- 
 Install dependencies:
 ```bash
-Install dependencies:
+pip install -r requirements.txt
 ```
 
 🚀 Run the Pipeline
