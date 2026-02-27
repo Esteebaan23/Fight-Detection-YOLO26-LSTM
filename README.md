@@ -100,9 +100,9 @@ python -m scripts.annotate_video \
 - LayerNorm + GELU head
 - Binary classification (Fight / No Fight)
 
-
-## 📊 Output
 ---
+## 📊 Output
+
 The system produces:
 
 - Annotated MP4 video
@@ -114,7 +114,7 @@ The system produces:
 - GPU recommended for real-time performance.
 - Weights must match the architecture defined in lstm_classifier.py.
 
-
-👤 Author
 ---
+## 👤 Author
+
 Harold Lucero N.
