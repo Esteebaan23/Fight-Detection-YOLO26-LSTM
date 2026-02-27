@@ -67,7 +67,7 @@ source venv/bin/activate      # macOS/Linux
 venv\\Scripts\\activate       # Windows
 ```
 
---
+
 Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -93,28 +93,28 @@ python -m scripts.annotate_video \
 | `--display`     | `opencv` or `colab`              |
 | `--display-fps` | Max FPS for realtime display     |
 
---
-LSTM Classifier
+---
+## LSTM Classifier
 - 3-layer BiLSTM
 - Attention mechanism
 - LayerNorm + GELU head
 - Binary classification (Fight / No Fight)
 
+
+## 📊 Output
 ---
-📊 Output
- 
 The system produces:
 
 - Annotated MP4 video
 - Bounding boxes per detection
 
 ---
-⚠ Notes
----
+## ⚠ Notes
+
 - GPU recommended for real-time performance.
 - Weights must match the architecture defined in lstm_classifier.py.
 
----
-👤 Author
 
+👤 Author
+---
 Harold Lucero N.
