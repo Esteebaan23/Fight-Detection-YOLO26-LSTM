@@ -73,7 +73,15 @@ class VideoAnnotator:
                     current_label = self.temporal.predict_label(window_feats)
 
                 out_frame = frame.copy()
-                out_frame = draw_detections(out_frame, res, self.detector.names, topk=self.cfg.topk)
+                if current_label == "Fight":
+                    out_frame = draw_detections(
+                        out_frame,
+                        res,
+                        self.detector.names,
+                        topk=self.cfg.topk,
+                        allowed_classes=[0]  # 0 = violence
+                    )
+                #out_frame = draw_detections(out_frame, res, self.detector.names, topk=self.cfg.topk)
                 out_frame = put_global_label(out_frame, current_label)
 
                 if self.viewer is not None:
